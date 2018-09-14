@@ -53,17 +53,17 @@ This is an unbiased, general purpose assay that maximizes information content fo
 # :checkered_flag: Challenge 
 
 As in many biological experiments, imaging data may be subject to batch effects and undesired artifacts :scream:.
-More specifically, given two batches of microscopy images with the same treatments :pill:, but acquired under different technical conditions :a: :vs: :b:, a difference in the quantitative measures is likely to be observed :x:.
+More specifically, given two batches of microscopy images with the same treatments :pill:, but acquired under different technical conditions :a::vs::b:, a difference in the quantitative measures is likely to be observed :x:.
 These differences are not due to meaningful biological variations and can be removed using computational methods :computer:.
 
-The goal of the challenge :checkered_flag: is to analyze the profiles of two different batches of data :a: :b: and design computational methods to correct batch effects :white_check_mark:.
+The goal of the challenge :checkered_flag: is to analyze the profiles of two different batches of data :a::b: and design computational methods to correct batch effects :white_check_mark:.
 A successful method :trophy: will be able to align the information content of both batches :ab:, 
 making profiles of the same treatment have similar measurements without distorting the relationships among other treatments :smiley:.
-The following metrics will be used to assess the quality of entries :triangular_ruler: :
+The following metrics will be used to assess the quality of entries :triangular_ruler::
 
-1. :arrow_upper_right: :arrow_upper_right: Replicate correlation
-2. :top: :arrows_counterclockwise: Enrichment of biologically relevant matches in the top connections
-3. :id: :white_check_mark: Correct association of treatment type
+1. :arrow_upper_right::arrow_upper_right: Replicate correlation
+2. :top::arrows_counterclockwise: Enrichment of biologically relevant matches in the top connections
+3. :id::white_check_mark: Correct association of treatment type
 
 # :dvd: Data
 
