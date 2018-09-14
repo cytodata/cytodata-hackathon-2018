@@ -45,6 +45,10 @@ In the CytoData challenge, we use data from chemical and genetic perturbation ex
 In the CytoData challenge, we use an imaging assay called Cell Painting, that paints the cells with 6 stains, imaged in 5 channels, highlighting 8 cellular compartments. 
 This is an unbiased, general purpose assay that maximizes information content for profiling, but the assay can be adapted to meet the needs of a research project.
 
+<p align="center">
+  <img src="files/cell_painting.png?raw=True" alt="Applications"/>
+</p>
+
 
 # :checkered_flag: Challenge 
 
