@@ -69,7 +69,6 @@ The following metrics will be used to assess the quality of entries :triangular_
 
 From the data analysis perspective, the problem can be formulated in various ways, including 
 manifold learning, domain adaptation, subspace alignment, and transfer learning.
-Add an issue to this repository with links to relevant literature if you want to suggest a methodology and discuss it with other participants.
 
 <p align="center">
   <img src="files/domains.png?raw=True" alt="Domains"/>
@@ -78,9 +77,35 @@ Add an issue to this repository with links to relevant literature if you want to
 
 # :dvd: Data
 
+We are glad to announce that four datasets will be provided during the CytoData 2018 Challenge :tada::tada::tada::tada:. 
+All of them were acquired using the Cell Painting assay, at high-throughput, in 384 well plates :microscope:, as part of the research 
+conducted in the Broad Institute of MIT and Harvard. 
+The following table describes the experiment details of each dataset.
+
+| Dataset :dvd: | Type :syringe: :pill: | Number of treatments :hash: | Cell line :cancer: |
+|---|---|---|---|
+| BBBC037 | Genetic perturbations. ORF over-expression | 200 wild type genes | U2OS |
+| BBBC043 | Genetic perturbations. ORF over-expression | 596 alleles of 53 genes | A549 |
+| BBBC022 | Chemical perturbations. Bioactive compounds | 1,600 compounds | U2OS |
+| BBBC036 | Chemical perturbations. Bioactive compounds | 5,000 compounds | U2OS |
+
+Notice that two datasets represent genetic perturbations and the other two represent chemical perturbations.
+The challenge will consider the cross-dataset matching problem across each of the two pairs :cd::twisted_rightwards_arrows::dvd:, 
+i.e, profiles in BBBC037 have to be matched with profiles in BBBC043 because both contain genetic perturbations.
+Similarly, profiles in BBBC022 have to be matched with profiles in BBBC036 because both contain chemical perturbations.
+
+The imaging data for all three datasets is more than 3TB of data :boom:, which will be available to everyone during and after the challenge.
+However, to facilitate the analysis of treatment profiles and to focus on the cross-dataset matching problem, all the datasets have been processed
+before-hand using the profiling workflow described above :sunglasses:.
+In particular, two versions of well-level population profiles will be available during the challenge: 
+1. Classical features computed with the CellProfiler software using pipelines optimized for Cell Painting images.
+2. Deep learning features computed with a convolutional neural network pretrained on ImageNet.
 
 
 # :performing_arts: Format
+
+Add an issue to this repository with links to relevant literature if you want to suggest a methodology and discuss it with other participants.
+
 
 # :wrench: Resources
 
