@@ -17,7 +17,7 @@ These profiles encode the morphological changes of cell populations exposed to t
 Image-based profiles can be used to compare the response of cells to different treatments, and to map their similarities.
 
 <p align="center">
-  <img src="files/profiling" alt="Profiling"/>
+  <img src="files/profiling.png?raw=True" alt="Profiling"/>
 </p>
 ![profiling](/files/profiling.png)
 
