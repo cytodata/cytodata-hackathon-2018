@@ -65,7 +65,20 @@ The following metrics will be used to assess the quality of entries :triangular_
 2. :top::arrows_counterclockwise: Enrichment of biologically relevant matches in the top connections
 3. :id::white_check_mark: Correct association of treatment type
 
+## :bulb: Tip
+
+From the data analysis perspective, the problem can be formulated in various ways, including 
+manifold learning, domain adaptation, subspace alignment, and transfer learning.
+Add an issue to this repository with links to relevant literature if you want to suggest a methodology and discuss it with other participants.
+
+<p align="center">
+  <img src="files/domains.png?raw=True" alt="Domains"/>
+</p>
+
+
 # :dvd: Data
+
+
 
 # :performing_arts: Format
 
