@@ -35,7 +35,7 @@ There are many types of biological studies that can be conducted using image-bas
 In the CytoData challenge, we use data from chemical and genetic perturbation experiments (see below).
 
 <p align="center">
-  <img src="files/applications.png?raw=True" alt="Applications"/>
+  <img src="files/application.png?raw=True" alt="Applications"/>
 </p>
 
 
