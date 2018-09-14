@@ -16,24 +16,30 @@ The information of a population of cells is aggregated into a single vector, als
 These profiles encode the morphological changes of cell populations exposed to treatments.
 Image-based profiles can be used to compare the response of cells to different treatments, and to map their similarities.
 
+
 :alien: **: Is image-based profiling the same as image-based screening?**
 
-:sunglasses: :
+:sunglasses: : Screening and profiling are different. 
+Screening uses images to identify a phenotype of interest known beforehand.
+Profiling measures as many cell properties as possible to identify relationships among multiple phenotypes.
 
 
 :alien: **: What are the applications of image-based profiling?**
 
 :sunglasses: : Image-based profiles can be used for drug discovery and functional genomics applications. 
 There are many types of biological studies that can be conducted using image-based profiling.
-For a review of research studies using images, see the following paper.
-In the CytoData challenge, we will explore image-based profiles obtained from chemical and genetic screens (see Data below).
+In the CytoData challenge, we use data from chemical and genetic perturbation experiments (see below).
+
 
 :alien: **: What imaging assays can be used for profiling?**
 
-:sunglasses: : Virtually any imaging assay can be used for profiling. High-content assays can be used for profiling
+:sunglasses: : Virtually any imaging assay can be used for profiling, specially high-content assays.
+In the CytoData challenge, we use an imaging assay called Cell Painting, that paints the cells with 6 stains, imaged in 5 channels, highlighting 8 cellular compartments. 
+This is an unbiased, general purpose assay that maximizes information content for profiling, but the assay can be adapted to meet the needs of a research project.
 
 
 # :checkered_flag: Challenge 
+
 
 # :dvd: Data
 
