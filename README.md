@@ -19,7 +19,6 @@ Image-based profiles can be used to compare the response of cells to different t
 <p align="center">
   <img src="files/profiling.png?raw=True" alt="Profiling"/>
 </p>
-![profiling](/files/profiling.png)
 
 
 :alien: **: Is image-based profiling the same as image-based screening?**
@@ -34,6 +33,10 @@ Profiling measures as many cell properties as possible to identify relationships
 :sunglasses: : Image-based profiles can be used for drug discovery and functional genomics applications. 
 There are many types of biological studies that can be conducted using image-based profiling.
 In the CytoData challenge, we use data from chemical and genetic perturbation experiments (see below).
+
+<p align="center">
+  <img src="files/applications.png?raw=True" alt="Applications"/>
+</p>
 
 
 :alien: **: What imaging assays can be used for profiling?**
