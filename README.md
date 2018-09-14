@@ -5,14 +5,14 @@ The challenge involves the transformation of signatures using machine learning :
 You will be given two datasets of image-based signatures :cd: :heavy_plus_sign: :dvd: acquired at different times :date: :clock130: and with different experimental conditions :pill: :syringe: with the goal of retrieving correct matches accurately :dart:. 
 See http://cytodata.org/ for more details.
 
-# Background
+# Background :tv:
 
-# Data
+# Data :dvd:
 
-# Challenge
+# Challenge :checkered_flag:
 
-# Format
+# Format :performing_arts:
 
-# Resources
+# Resources :wrench:
 
 # 
