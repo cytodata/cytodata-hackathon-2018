@@ -16,6 +16,9 @@ The information of a population of cells is aggregated into a single vector, als
 These profiles encode the morphological changes of cell populations exposed to treatments.
 Image-based profiles can be used to compare the response of cells to different treatments, and to map their similarities.
 
+<p align="center">
+  <img src="files/profiling" alt="Profiling"/>
+</p>
 ![profiling](/files/profiling.png)
 
 
