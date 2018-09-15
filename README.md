@@ -108,6 +108,7 @@ The CytoData 2018 challenge will be a collaborative hackathon :sparkles::compute
 The challenge will run for two days only, so participants are encouraged to investigate and plan some solutions before the venue starts :pencil:.
 In order to meet other participants, we will provide a slack channel to make general announcements and allow participants to organize teams and exchange ideas :bulb:.
 It's also a great idea to start discussing methods here in this GitHub repository :octocat:: 
+
 ```add an issue with links to relevant literature if you want to suggest a methodology and discuss it with other participants.```
 
 
