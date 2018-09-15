@@ -8,10 +8,15 @@ See http://cytodata.org/ for details of the event.
 ## Table of Contents
 
 [Background](#tv-background)
+
 [Challenge](#checkered_flag-challenge)
+
 [Data](#dvd-data)
+
 [Format](#performing_arts-format)
+
 [Resources](#wrench-resources)
+
 
 # :tv: Background
 
