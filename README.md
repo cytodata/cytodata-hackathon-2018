@@ -109,7 +109,7 @@ The challenge will run for two days only, so participants are encouraged to inve
 In order to meet other participants, we will provide a slack channel to make general announcements and allow participants to organize teams and exchange ideas :bulb:.
 It's also a great idea to start discussing methods here in this GitHub repository :octocat:: 
 
-```add an issue with links to relevant literature if you want to suggest a methodology and discuss it with other participants.```
+```add issues with relevant links if you want to suggest a methodology and discuss it with other participants!```
 
 
 Teams will have no less than three :three: and no more than five :five: participants, ideally from different institutions. 
