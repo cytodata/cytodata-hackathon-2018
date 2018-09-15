@@ -117,6 +117,15 @@ Teams will compite with each other :rage1: to improve the three performance metr
 Participants of the team will be able to upload solutions to a scoreboard to check that everything is running properly and to get feedback on performance :ok_hand:.
 The best performing solutions will win prizes provided by our sponsors! :trophy::clap:
 
+
 # :wrench: Resources
 
+The following resources will be provided during the challenge:
 
+1. :satellite: Internet connection.
+2. :dvd: Access to all files of the four datasets, including pre-computed profiles.
+3. :octocat: A toolkit, written in R and Python, to load the pre-computed profiles, run a baseline model and create a submission.
+4. :chart_with_upwards_trend: An account in the scoreboard to evaluate the generated submissions.
+5. :computer: Teams will be given access to pre-configured virtual machines in the Amazon Cloud to run experiments.
+
+Participants of the challenge can make use of their own computational resources (laptops, servers, etc) to run experiments during the challenge.
