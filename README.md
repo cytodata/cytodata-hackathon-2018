@@ -80,7 +80,7 @@ manifold learning, domain adaptation, subspace alignment, and transfer learning.
 We are glad to announce that four datasets will be provided during the CytoData 2018 Challenge :tada::tada::tada::tada:. 
 All of them were acquired using the Cell Painting assay, at high-throughput, in 384 well plates :microscope:, as part of the research 
 conducted in the Broad Institute of MIT and Harvard. 
-The following table describes the experiment details of each dataset.
+The following table describes the experimential details of each dataset.
 
 | Dataset :dvd: | Type :syringe: :pill: | Number of treatments :hash: | Cell line :cancer: |
 |---|---|---|---|
@@ -104,9 +104,18 @@ In particular, two versions of well-level population profiles will be available 
 
 # :performing_arts: Format
 
-Add an issue to this repository with links to relevant literature if you want to suggest a methodology and discuss it with other participants.
+The CytoData 2018 challenge will be a collaborative hackathon :sparkles::computer:, with participants forming teams to discuss and implement solutions to the problem.
+The challenge will run for two days only, so participants are encouraged to investigate and plan some solutions before the venue starts :pencil:.
+In order to meet other participants, we will provide a slack channel to make general announcements and allow participants to organize teams and exchange ideas :bulb:.
+It's also a great idea to start discussing methods here in this GitHub repository :octocat:: 
+add an issue with links to relevant literature if you want to suggest a methodology and discuss it with other participants.
 
+
+Teams will have no less than three :three: and no more than five :five: participants, ideally from different institutions. 
+Teams will compite with each other :rage1: to improve the three performance metrics mentioned before :bowling:.
+Participants of the team will be able to upload solutions to a scoreboard to check that everything is running properly and to get feedback on performance :ok_hand:.
+The best performing solutions will win prizes provided by our sponsors! :trophy::clap:
 
 # :wrench: Resources
 
-# 
+
