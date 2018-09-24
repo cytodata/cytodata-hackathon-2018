@@ -1,6 +1,7 @@
 # :microscope: CytoData - 2018 Challenge 
 
-The CytoData 2018 Challenge features batch effect correction and cross dataset profile matching :cd: :twisted_rightwards_arrows: :dvd:. 
+If we want to retrieve "matching" profiles from a large collection of image-based profiling experiments (for example to find similar drugs, similar genes, or drug-gene or drug-disease combinations), how do we ensure that the profiles are aligned well enough? 
+The CytoData 2018 Challenge addresses this, featuring batch effect correction and cross dataset profile matching :cd: :twisted_rightwards_arrows: :dvd:. 
 The challenge involves the transformation of signatures using machine learning :space_invader: or statistical methods :bar_chart:. 
 You will be given two datasets of image-based signatures :cd: :heavy_plus_sign: :dvd: acquired at different times :date: :clock130: and with different experimental conditions :pill: :syringe: with the goal of retrieving correct matches accurately :dart:. 
 See http://cytodata.org/ for details of the event.
@@ -37,8 +38,8 @@ Image-based profiles can be used to compare the response of cells to different t
 :alien: **: Is image-based profiling the same as image-based screening?**
 
 :sunglasses: : Screening and profiling are different. 
-Screening uses images to identify a phenotype of interest known beforehand.
-Profiling measures as many cell properties as possible to identify relationships among multiple phenotypes.
+Screening uses images to identify phenotype(s) of interest known beforehand.
+Profiling measures as many cell properties as possible, using all the phenotypes to identify relationships among multiple different samples.
 
 
 :alien: **: What are the applications of image-based profiling?**
@@ -54,8 +55,8 @@ In the CytoData challenge, we use data from chemical and genetic perturbation ex
 
 :alien: **: What imaging assays can be used for profiling?**
 
-:sunglasses: : Virtually any imaging assay can be used for profiling, specially high-content assays.
-In the CytoData challenge, we use an imaging assay called Cell Painting, that paints the cells with 6 stains, imaged in 5 channels, highlighting 8 cellular compartments. 
+:sunglasses: : Virtually any imaging assay can be used for profiling, especially high-content assays.
+In the 2018 CytoData challenge, we use an imaging assay called Cell Painting, that paints the cells with 6 stains, imaged in 5 channels, highlighting 8 cellular compartments. 
 This is an unbiased, general purpose assay that maximizes information content for profiling, but the assay can be adapted to meet the needs of a research project.
 
 <p align="center">
@@ -93,7 +94,7 @@ manifold learning, domain adaptation, subspace alignment, and transfer learning.
 We are glad to announce that four datasets will be provided during the CytoData 2018 Challenge :tada::tada::tada::tada:. 
 All of them were acquired using the Cell Painting assay, at high-throughput, in 384 well plates :microscope:, as part of the research 
 conducted in the Broad Institute of MIT and Harvard. 
-The following table describes the experimential details of each dataset.
+The following table describes the experimental details of each dataset.
 
 | Dataset :dvd: | Type :syringe: :pill: | Number of treatments :hash: | Cell line :cancer: |
 |---|---|---|---|
@@ -118,15 +119,15 @@ In particular, two versions of well-level population profiles will be available 
 # :performing_arts: Format
 
 The CytoData 2018 challenge will be a collaborative hackathon :sparkles::computer:, with participants forming teams to discuss and implement solutions to the problem.
-The challenge will run for two days only, so participants are encouraged to investigate and plan some solutions before the venue starts :pencil:.
+The challenge will run for two days only, so participants are encouraged to investigate and plan some solutions before the event starts :pencil:.
 In order to meet other participants, we will provide a slack channel to make general announcements and allow participants to organize teams and exchange ideas :bulb:.
 It's also a great idea to start discussing methods here in this GitHub repository :octocat:: 
 
 ```add issues with relevant links if you want to suggest a methodology and discuss it with other participants!```
 
 
-Teams will have no less than three :three: and no more than five :five: participants, ideally from different institutions. 
-Teams will compite with each other :rage1: to improve the three performance metrics mentioned before :bowling:.
+Teams will have no fewer than three :three: and no more than five :five: participants, ideally from different institutions. 
+Teams will compete with each other :rage1: to improve the three performance metrics mentioned above :bowling:.
 Participants of the team will be able to upload solutions to a scoreboard to check that everything is running properly and to get feedback on performance :ok_hand:.
 The best performing solutions will win prizes provided by our sponsors! :trophy::clap:
 
