@@ -1,11 +1,11 @@
-```{r}
+```{r, message=FALSE}
 library(tidyverse)
 library(cytominer)
 library(magrittr)
 library(RCurl)
 ```
 
-```{r}
+```{r, message=FALSE}
 load_dataset  <- function(partition, dataset,feature){
     file_name  <- read_csv("../datasets.csv") 
     x  <-  file_name %>% filter(
@@ -25,24 +25,27 @@ load_dataset  <- function(partition, dataset,feature){
 # Load data 
 We load training and test datasets for both genetic perturbation experiments 
 
-```{r}
+```{r, message=FALSE}
 # bbbc37 data 
-bbbc037_train  <- load_dataset("Train","BBBC037","DeepLearning")  %>% 
-    mutate(Metadata_x_mutation_status = "none")
+bbbc037_train  <- load_dataset("Train","BBBC037","CellProfiler")  %>% 
+    mutate(Metadata_x_mutation_status = "none")  %>%
+  filter(str_detect(Metadata_pert_name, "WT") | Metadata_ASSAY_WELL_ROLE %in% c("Untreated", "CTRL")) 
 
-bbbc037_test <- load_dataset("Test","BBBC037","DeepLearning")  %>% 
-    mutate(Metadata_x_mutation_status = "none")
+bbbc037_test <- load_dataset("Test","BBBC037","CellProfiler")  %>% 
+    mutate(Metadata_x_mutation_status = "none")  %>%
+  filter(str_detect(Metadata_pert_name, "WT") | Metadata_ASSAY_WELL_ROLE %in% c("Untreated", "CTRL")) 
 
-bbbc037  <- rbind(bbbc037_train, bbbc037_test)
+bbbc037 <- 
+  bind_rows(bbbc037_train, bbbc037_test)
 ```
 
-```{r}
+```{r, message=FALSE}
 # bbbc043 data 
-bbbc043_train  <- load_dataset("Train","BBBC043","DeepLearning")
+bbbc043_train  <- load_dataset("Train","BBBC043","CellProfiler")
  
-bbbc043_test <- load_dataset("Test","BBBC043","DeepLearning")
+bbbc043_test <- load_dataset("Test","BBBC043","CellProfiler")
 
-bbbc043  <- rbind(bbbc043_train, bbbc043_test)
+bbbc043  <- bind_rows(bbbc043_train, bbbc043_test)
 ```
 
 ## Check dimensionality
@@ -69,31 +72,20 @@ Metadata_names_bbbc043 <- c(
 
 common_metadata  <- intersect(Metadata_names_bbbc037, Metadata_names_bbbc043)  
 common_features  <- setdiff(intersect(colnames_bbbc037, colnames_bbbc043),common_metadata)
+
 ```
-
-bbbc037_na_feature  <- cytominer::drop_na_columns(
-    population = bbbc037,
-    variables = common_features,
-    cutoff = 0
-    )
-
-bbbc043_na_feature  <- cytominer::drop_na_columns(
-    population = bbbc043,
-    variables = common_features,
-    cutoff = 0
-    )
 
 # Concatenate data sets
 
 ```{r}
-population  <- rbind(
+population  <- bind_rows(
     bbbc037 %>% 
         select(c(common_metadata, common_features)),
     bbbc043 %>% 
         select(c(common_metadata, common_features))
     ) %>% 
-    mutate(Metadata_perturbation = 'genetic') %>% 
-    select(Metadata_perturbation, everything())
+    mutate(Metadata_perturbation = "genetic") %>% 
+    select(matches("^Meta"), everything())
 ```
 
 ## Important: update column names! 
