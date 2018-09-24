@@ -7,3 +7,9 @@ BBBC037,Test,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/TA-ORF-BB
 BBBC037,Train,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/TA-ORF-BBBC037-Rohban/profiles_dp/bbbc037_train.csv
 BBBC043,Test,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/LUAD-BBBC043-Caicedo/profiles_dp/bbbc043_test.csv
 BBBC043,Train,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/LUAD-BBBC043-Caicedo/profiles_dp/bbbc043_train.csv
+BBBC036,Test,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/CDRPBIO-BBBC036-Bray/profiles_dp/bbbc036_test.csv
+BBBC036,Train,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/CDRPBIO-BBBC036-Bray/profiles_dp/bbbc036_train.csv
+BBBC036,Test,CellProfiler, https://s3.amazonaws.com/cytodata/evaluation/CDRPBIO-BBBC036-Bray/profiles_cp/bbbc036_test.csv
+BBBC036,Train,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/CDRPBIO-BBBC036-Bray/profiles_cp/bbbc036_train.csv
+BBBC022,Test,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/Bioactives-BBBC022-Gustafsdottir/profiles_cp/bbbc022_test.csv
+BBBC022,Train,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/Bioactives-BBBC022-Gustafsdottir/profiles_cp/bbbc022_train.csv
