@@ -1,0 +1,9 @@
+Dataset,Partition,Features,Link
+BBBC037,Test,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/TA-ORF-BBBC037-Rohban/profiles_cp/bbbc037_test.csv
+BBBC037,Train,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/TA-ORF-BBBC037-Rohban/profiles_cp/bbbc037_train.csv
+BBBC043,Test,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/LUAD-BBBC043-Caicedo/profiles_cp/bbbc043_test.csv
+BBBC043,Train,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/LUAD-BBBC043-Caicedo/profiles_cp/bbbc043_train.csv
+BBBC037,Test,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/TA-ORF-BBBC037-Rohban/profiles_dp/bbbc037_test.csv
+BBBC037,Train,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/TA-ORF-BBBC037-Rohban/profiles_dp/bbbc037_train.csv
+BBBC043,Test,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/LUAD-BBBC043-Caicedo/profiles_dp/bbbc043_test.csv
+BBBC043,Train,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/LUAD-BBBC043-Caicedo/profiles_dp/bbbc043_train.csv
