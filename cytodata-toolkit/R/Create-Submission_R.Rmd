@@ -1,0 +1,201 @@
+```{r}
+library(tidyverse)
+library(cytominer)
+library(magrittr)
+library(RCurl)
+```
+
+```{r}
+load_dataset  <- function(partition, dataset,feature){
+    file_name  <- read_csv("../datasets.csv") 
+    x  <-  file_name %>% filter(
+         Partition == partition,
+         Dataset == dataset,
+         Features == feature) %>% 
+         extract2("Link")
+
+    return(read_csv(x) %>% 
+          mutate(Metadata_dataset = dataset) %>%
+          mutate(Metadata_partition = partition) %>% 
+          mutate(Metadata_features = feature) 
+          )
+    }
+```
+
+# Load data 
+We load training and test datasets for both genetic perturbation experiments 
+
+```{r}
+# bbbc37 data 
+bbbc037_train  <- load_dataset("Train","BBBC037","DeepLearning")  %>% 
+    mutate(Metadata_x_mutation_status = "none")
+
+bbbc037_test <- load_dataset("Test","BBBC037","DeepLearning")  %>% 
+    mutate(Metadata_x_mutation_status = "none")
+
+bbbc037  <- rbind(bbbc037_train, bbbc037_test)
+```
+
+```{r}
+# bbbc043 data 
+bbbc043_train  <- load_dataset("Train","BBBC043","DeepLearning")
+ 
+bbbc043_test <- load_dataset("Test","BBBC043","DeepLearning")
+
+bbbc043  <- rbind(bbbc043_train, bbbc043_test)
+```
+
+## Check dimensionality
+
+```{r}
+dim(bbbc043)
+dim(bbbc037)
+```
+
+## Extract common features 
+
+```{r}
+colnames_bbbc037 <- colnames(bbbc037)
+colnames_bbbc043 <- colnames(bbbc043)
+
+
+Metadata_names_bbbc037 <- c(
+   stringr::str_subset(colnames_bbbc037, "^Meta")
+) 
+
+Metadata_names_bbbc043 <- c(
+   stringr::str_subset(colnames_bbbc043, "^Meta")
+) 
+
+common_metadata  <- intersect(Metadata_names_bbbc037, Metadata_names_bbbc043)  
+common_features  <- setdiff(intersect(colnames_bbbc037, colnames_bbbc043),common_metadata)
+```
+
+bbbc037_na_feature  <- cytominer::drop_na_columns(
+    population = bbbc037,
+    variables = common_features,
+    cutoff = 0
+    )
+
+bbbc043_na_feature  <- cytominer::drop_na_columns(
+    population = bbbc043,
+    variables = common_features,
+    cutoff = 0
+    )
+
+# Concatenate data sets
+
+```{r}
+population  <- rbind(
+    bbbc037 %>% 
+        select(c(common_metadata, common_features)),
+    bbbc043 %>% 
+        select(c(common_metadata, common_features))
+    ) %>% 
+    mutate(Metadata_perturbation = 'genetic') %>% 
+    select(Metadata_perturbation, everything())
+```
+
+## Important: update column names! 
+
+```{r}
+colnames_combined  <- colnames(population)
+
+common_metadata  <- c(
+   stringr::str_subset(colnames_combined, "^Meta")
+) 
+
+common_features  <- setdiff(colnames_combined, common_metadata)
+```
+
+Cytominer has problems handling column names '1', '2' so we rename them to 'Feature_1', ... 
+
+```{r}
+common_features  <- paste0("Feature_",common_features)
+colnames(population)  <- c(common_metadata, common_features)
+```
+
+# Normalize data
+We use cytominer to normalize both datasets with respect to the controls, i.e. EMPTY genes
+
+```{r}
+population_normalized  <- cytominer::normalize(
+    population, 
+    variables = common_features, 
+    strata = c("Metadata_perturbation"), 
+    sample = population %>% 
+                filter(
+                    Metadata_gene_name == 'EMPTY',
+                    Metadata_partition == "Train"
+                ), 
+    operation = "standardize"
+)
+```
+
+```{r}
+population_normalized %>% dim() %>% print
+```
+
+# Aggregate data 
+
+```{r}
+population_aggregated  <- cytominer::aggregate(
+    population = population_normalized, 
+    variables = common_features, 
+    strata = c("Metadata_gene_name","Metadata_dataset","Metadata_x_mutation_status"), 
+    operation = "mean"
+) 
+```
+
+```{r}
+population_normalized %>% extract2("Metadata_gene_name") %>% print
+```
+
+```{r}
+population_aggregated %>% slice(1:2) %>% print
+```
+
+# Correlation matrix 
+
+```{r}
+cor_matrix  <- cor(
+    x = population_aggregated %>% 
+        filter(Metadata_dataset == 'BBBC037') %>% 
+        select(common_features) %>% 
+        as.matrix() %>% 
+        t, 
+    y = population_aggregated %>% 
+        filter(Metadata_dataset == 'BBBC043') %>% 
+        select(common_features) %>% 
+        as.matrix() %>% 
+        t,
+    use  = "complete.obs"
+    ) 
+```
+
+# Submision file 
+
+```{r}
+# set column names 
+colnames(cor_matrix)  <- population_aggregated %>% 
+                            filter(Metadata_dataset == 'BBBC043') %>%
+                            extract2("Metadata_x_mutation_status")
+
+# set row names 
+rownames(cor_matrix)  <- population_aggregated %>% 
+                            filter(Metadata_dataset == 'BBBC037') %>%
+                            extract2("Metadata_gene_name")
+
+
+df  <- cor_matrix %>% as_data_frame() %>% 
+            mutate(Metadata_gene_name = population_aggregated %>% 
+                            filter(Metadata_dataset == 'BBBC037') %>%
+                            extract2("Metadata_gene_name")) %>% 
+            select(Metadata_gene_name, everything())
+
+# write submission file
+write.csv(df,"../cytodata-baseline_R.csv",row.names = FALSE)
+```
+
+```{r}
+```
