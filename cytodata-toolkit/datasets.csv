@@ -13,3 +13,5 @@ BBBC036,Test,CellProfiler, https://s3.amazonaws.com/cytodata/evaluation/CDRPBIO-
 BBBC036,Train,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/CDRPBIO-BBBC036-Bray/profiles_cp/bbbc036_train.csv
 BBBC022,Test,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/Bioactives-BBBC022-Gustafsdottir/profiles_cp/bbbc022_test.csv
 BBBC022,Train,CellProfiler,https://s3.amazonaws.com/cytodata/evaluation/Bioactives-BBBC022-Gustafsdottir/profiles_cp/bbbc022_train.csv
+BBBC022,Test,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/Bioactives-BBBC022-Gustafsdottir/profiles_dp/bbbc022_test.csv
+BBBC022,Train,DeepLearning,https://s3.amazonaws.com/cytodata/evaluation/Bioactives-BBBC022-Gustafsdottir/profiles_dp/bbbc022_train.csv
