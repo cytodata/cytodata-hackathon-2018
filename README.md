@@ -115,6 +115,50 @@ In particular, two versions of well-level population profiles will be available 
 1. Classical features computed with the CellProfiler software using pipelines optimized for Cell Painting images.
 2. Deep learning features computed with a convolutional neural network pretrained on ImageNet.
 
+## Data available on AWS 
+All data is available as Amazon Public Data Set and be accessed at 
+```
+s3://cytodata/
+```
+
+All image data and extracted single cell features and aggregated profiles can be found in `s3://cytodata/datasets/`. This folder has the structure
+```
+.
+├── Bioactives-BBBC022-Gustafsdottir
+│   ├── profiles
+│   │   └── Bioactives-BBBC022-Gustafsdottir
+│   ├── images
+│   │   └── Bioactives-BBBC022-Gustafsdottir
+│   └── metadata
+│       └── Bioactives-BBBC022-Gustafsdottir
+├── CDRPBIO-BBBC036-Bray
+│   ├── profiles
+│   │   └── CDRPBIO-BBBC036-Bray
+│   ├── images
+│   │   └── CDRPBIO-BBBC036-Bray
+│   └── metadata
+│       └── CDRPBIO-BBBC036-Bray
+├── LUAD-BBBC041-Caicedo
+│   ├── profiles
+│   │   └── LUAD-BBBC041-Caicedo
+│   ├── images
+│   │   └── LUAD-BBBC041-Caicedo
+│   └── metadata
+│       └── LUAD-BBBC041-Caicedo
+└── TA-ORF-BBBC037-Rohban
+    ├── profiles
+    │   └── TA-ORF-BBBC037-Rohban
+    ├── images
+    │   └── TA-ORF-BBBC037-Rohban
+    └── metadata
+        └── TA-ORF-BBBC037-Rohban
+```
+
+The subfolder contain the following information: 
+* the directory `images` contain Cell Painting images as tiff files 
+* the directory `profiles` contains single cell data in sqlite format and profiles aggregated to replicate level as csv files (aggregated as mean profiles per well) 
+* the metadata directory contains information about the platemaps and the used perturbations. 
+
 
 # :performing_arts: Format
 
