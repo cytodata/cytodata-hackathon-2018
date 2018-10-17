@@ -116,7 +116,7 @@ In particular, two versions of well-level population profiles will be available 
 2. Deep learning features computed with a convolutional neural network pretrained on ImageNet.
 
 ## Data available on AWS 
-All data is available as Amazon Public Data Set and be accessed at 
+All data is available as Amazon Public Data Set on https://registry.opendata.aws/cell-painting-image-collection/ and be accessed at 
 ```
 s3://cytodata/
 ```
