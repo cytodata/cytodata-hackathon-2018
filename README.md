@@ -116,12 +116,18 @@ In particular, two versions of well-level population profiles will be available 
 2. Deep learning features computed with a convolutional neural network pretrained on ImageNet.
 
 ## Data available on AWS 
-All data is available as Amazon Public Data Set on https://registry.opendata.aws/cell-painting-image-collection/ and be accessed at 
-```
-s3://cytodata/
-```
 
-All image data and extracted single cell features and aggregated profiles can be found in `s3://cytodata/datasets/`. This folder has the structure
+As of 2024, all data has moved to the [Cell Painting Gallery](https://github.com/broadinstitute/cellpainting-gallery) at `s3://cellpainting-gallery`.
+The folder structue has changed slightly from the original structure to comply with [Cell Painting Gallery formatting](https://github.com/broadinstitute/cellpainting-gallery/blob/main/folder_structure.md).
+
+The datasets have undergone the following renaming in the Cell Painting Gallery:  
+Bioactives-BBBC022-Gustafsdottir => `cpg0030-gustafsdottir-cellpainting`  
+CDRPBIO-BBBC036-Bray => `cpg0012-wawer-bioactivecompoundprofiling`  
+LUAD-BBBC041-Caicedo => `cpg0031-caicedo-cmvip`  
+
+
+During the Cytodata hackathon the data was available as Amazon Public Data Set on https://registry.opendata.aws/cell-painting-image-collection/ at `s3://cytodata`.
+All image data and extracted single cell features and aggregated profiles were found in `s3://cytodata/datasets/` with the following structure:
 ```
 .
 ├── Bioactives-BBBC022-Gustafsdottir
